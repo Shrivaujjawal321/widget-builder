@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import { useOrchestratorStore, defaultManifest, AnimationType } from '../../store/useOrchestratorStore';
 import { generateWidgetManifest } from '../../services/aiService';
-import { Sparkles, Settings, Code, Palette, Zap, Layout, Terminal, Bot, Skull, Flame, Star, Heart, Scissors, MessageSquare, Ghost, CircleDashed } from 'lucide-react';
+import { 
+  Sparkles, Settings, Code, Palette, Zap, Layout, Terminal, Bot, Skull, Flame, Star, Heart, Scissors, MessageSquare, Ghost, CircleDashed,
+  ShoppingBag, Utensils, Coffee, Stethoscope, Briefcase, GraduationCap, Camera, Music, Plane, Home, Dumbbell, Truck, Code as CodeIcon,
+  Palette as PaletteIcon, Hammer, ShoppingCart, Building, Landmark, Hotel, Car, Bike, Gift, Clapperboard, Gamepad2, Mic, Headphones,
+  Book, Newspaper, PenTool, Brush, Layers, Database, Cpu, Server, Cloud, Shield, Lock, Key, Wallet, CreditCard, DollarSign,
+  TrendingUp, PieChart, BarChart3, Activity, HeartPulse, Thermometer, Pill, Syringe, Baby, Dog, Cat, Fish, Leaf,
+  Sprout, Flower2, Sun, Moon, CloudRain, Wind, Droplets, Umbrella
+} from 'lucide-react';
 
 export const Dashboard: React.FC = () => {
   const { manifest, setManifest, updateTheme, updateAnimation, updateContext } = useOrchestratorStore();
@@ -33,6 +40,68 @@ export const Dashboard: React.FC = () => {
     { id: 'heart', icon: <Heart size={16} /> },
     { id: 'scissors', icon: <Scissors size={16} /> },
     { id: 'message', icon: <MessageSquare size={16} /> },
+    { id: 'shopping-bag', icon: <ShoppingBag size={16} /> },
+    { id: 'utensils', icon: <Utensils size={16} /> },
+    { id: 'coffee', icon: <Coffee size={16} /> },
+    { id: 'stethoscope', icon: <Stethoscope size={16} /> },
+    { id: 'briefcase', icon: <Briefcase size={16} /> },
+    { id: 'graduation-cap', icon: <GraduationCap size={16} /> },
+    { id: 'camera', icon: <Camera size={16} /> },
+    { id: 'music', icon: <Music size={16} /> },
+    { id: 'plane', icon: <Plane size={16} /> },
+    { id: 'home', icon: <Home size={16} /> },
+    { id: 'dumbbell', icon: <Dumbbell size={16} /> },
+    { id: 'truck', icon: <Truck size={16} /> },
+    { id: 'code', icon: <CodeIcon size={16} /> },
+    { id: 'palette', icon: <PaletteIcon size={16} /> },
+    { id: 'hammer', icon: <Hammer size={16} /> },
+    { id: 'shopping-cart', icon: <ShoppingCart size={16} /> },
+    { id: 'building', icon: <Building size={16} /> },
+    { id: 'landmark', icon: <Landmark size={16} /> },
+    { id: 'hotel', icon: <Hotel size={16} /> },
+    { id: 'car', icon: <Car size={16} /> },
+    { id: 'bike', icon: <Bike size={16} /> },
+    { id: 'gift', icon: <Gift size={16} /> },
+    { id: 'clapperboard', icon: <Clapperboard size={16} /> },
+    { id: 'gamepad-2', icon: <Gamepad2 size={16} /> },
+    { id: 'mic', icon: <Mic size={16} /> },
+    { id: 'headphones', icon: <Headphones size={16} /> },
+    { id: 'book', icon: <Book size={16} /> },
+    { id: 'newspaper', icon: <Newspaper size={16} /> },
+    { id: 'pen-tool', icon: <PenTool size={16} /> },
+    { id: 'brush', icon: <Brush size={16} /> },
+    { id: 'layers', icon: <Layers size={16} /> },
+    { id: 'database', icon: <Database size={16} /> },
+    { id: 'cpu', icon: <Cpu size={16} /> },
+    { id: 'server', icon: <Server size={16} /> },
+    { id: 'cloud', icon: <Cloud size={16} /> },
+    { id: 'shield', icon: <Shield size={16} /> },
+    { id: 'lock', icon: <Lock size={16} /> },
+    { id: 'key', icon: <Key size={16} /> },
+    { id: 'wallet', icon: <Wallet size={16} /> },
+    { id: 'credit-card', icon: <CreditCard size={16} /> },
+    { id: 'dollar-sign', icon: <DollarSign size={16} /> },
+    { id: 'trending-up', icon: <TrendingUp size={16} /> },
+    { id: 'pie-chart', icon: <PieChart size={16} /> },
+    { id: 'bar-chart-3', icon: <BarChart3 size={16} /> },
+    { id: 'activity', icon: <Activity size={16} /> },
+    { id: 'heart-pulse', icon: <HeartPulse size={16} /> },
+    { id: 'thermometer', icon: <Thermometer size={16} /> },
+    { id: 'pill', icon: <Pill size={16} /> },
+    { id: 'syringe', icon: <Syringe size={16} /> },
+    { id: 'baby', icon: <Baby size={16} /> },
+    { id: 'dog', icon: <Dog size={16} /> },
+    { id: 'cat', icon: <Cat size={16} /> },
+    { id: 'fish', icon: <Fish size={16} /> },
+    { id: 'leaf', icon: <Leaf size={16} /> },
+    { id: 'sprout', icon: <Sprout size={16} /> },
+    { id: 'flower-2', icon: <Flower2 size={16} /> },
+    { id: 'sun', icon: <Sun size={16} /> },
+    { id: 'moon', icon: <Moon size={16} /> },
+    { id: 'cloud-rain', icon: <CloudRain size={16} /> },
+    { id: 'wind', icon: <Wind size={16} /> },
+    { id: 'droplets', icon: <Droplets size={16} /> },
+    { id: 'umbrella', icon: <Umbrella size={16} /> },
   ];
 
   return (
@@ -160,7 +229,7 @@ export const Dashboard: React.FC = () => {
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs uppercase tracking-widest text-zinc-500 font-bold">Widget Icon</label>
-                      <div className="grid grid-cols-5 gap-2">
+                      <div className="grid grid-cols-8 gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
                         {iconOptions.map(opt => (
                           <button
                             key={opt.id}
@@ -173,17 +242,17 @@ export const Dashboard: React.FC = () => {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs uppercase tracking-widest text-zinc-500 font-bold">Widget Shape</label>
+                      <label className="text-xs uppercase tracking-widest text-zinc-500 font-bold">Widget Shape (Organic Blobs)</label>
                       <select 
                         value={manifest.shape}
                         onChange={(e) => setManifest({ ...manifest, shape: e.target.value as any })}
                         className="w-full bg-black/40 border border-white/10 rounded-xl p-3 text-sm outline-none"
                       >
-                        <option value="circle">Circle</option>
-                        <option value="square">Square</option>
-                        <option value="blob">Organic Blob</option>
-                        <option value="pill">Pill</option>
-                        <option value="diamond">Diamond</option>
+                        <option value="blob_standard">Standard Blob</option>
+                        <option value="blob_tall">Tall Organic</option>
+                        <option value="blob_wide">Wide Fluid</option>
+                        <option value="blob_asymmetric">Asymmetric Growth</option>
+                        <option value="blob_fluid">Liquid State</option>
                       </select>
                     </div>
                     <div className="space-y-2">
@@ -226,7 +295,7 @@ export const Dashboard: React.FC = () => {
                     <h2 className="text-xl font-semibold">Animation Engine</h2>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                    {(['elastic_pulse', 'liquid_morph', 'orbital_spin', 'magnetic_hover', 'ethereal_float', 'glow_breathing', 'ink_bleed', 'neon_flicker'] as AnimationType[]).map(type => (
+                    {(['elastic_pulse', 'liquid_morph', 'orbital_spin', 'magnetic_hover', 'ethereal_float', 'glow_breathing', 'ink_bleed', 'super_morph'] as AnimationType[]).map(type => (
                       <button
                         key={type}
                         onClick={() => updateAnimation({ type })}

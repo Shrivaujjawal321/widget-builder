@@ -25,11 +25,21 @@ export const generateWidgetManifest = async (prompt: string): Promise<WidgetMani
           name: { type: Type.STRING },
           iconType: { 
             type: Type.STRING,
-            enum: ["bot", "sparkles", "zap", "ghost", "message", "skull", "flame", "star", "heart", "scissors"]
+            enum: [
+              "bot", "sparkles", "zap", "ghost", "message", "skull", "flame", "star", "heart", "scissors",
+              "shopping-bag", "utensils", "coffee", "stethoscope", "briefcase", "graduation-cap", "camera", 
+              "music", "plane", "home", "dumbbell", "truck", "code", "palette", "hammer", "shopping-cart",
+              "building", "landmark", "hotel", "car", "bike", "gift", "camera-retro", "clapperboard",
+              "gamepad-2", "mic", "headphones", "book", "newspaper", "pen-tool", "brush", "layers",
+              "database", "cpu", "server", "cloud", "shield", "lock", "key", "wallet", "credit-card",
+              "dollar-sign", "trending-up", "pie-chart", "bar-chart-3", "activity", "heart-pulse",
+              "thermometer", "pill", "syringe", "baby", "dog", "cat", "fish", "leaf",
+              "sprout", "flower-2", "sun", "moon", "cloud-rain", "wind", "droplets", "umbrella"
+            ]
           },
           shape: {
             type: Type.STRING,
-            enum: ["circle", "square", "blob", "pill", "diamond"]
+            enum: ["blob_standard", "blob_tall", "blob_wide", "blob_asymmetric", "blob_fluid"]
           },
           theme: {
             type: Type.OBJECT,
@@ -60,7 +70,7 @@ export const generateWidgetManifest = async (prompt: string): Promise<WidgetMani
             properties: {
               type: { 
                 type: Type.STRING,
-                enum: ["elastic_pulse", "liquid_morph", "orbital_spin", "magnetic_hover", "ethereal_float", "glow_breathing", "ink_bleed", "neon_flicker"]
+                enum: ["elastic_pulse", "liquid_morph", "orbital_spin", "magnetic_hover", "ethereal_float", "glow_breathing", "ink_bleed", "super_morph"]
               },
               intensity: { type: Type.NUMBER },
               trigger: { 
@@ -75,7 +85,7 @@ export const generateWidgetManifest = async (prompt: string): Promise<WidgetMani
             properties: {
               openTransition: { 
                 type: Type.STRING,
-                enum: ["morph", "fade", "slide"]
+                enum: ["morph", "fade", "slide", "reveal", "rotate", "zoom"]
               },
               position: { 
                 type: Type.STRING,

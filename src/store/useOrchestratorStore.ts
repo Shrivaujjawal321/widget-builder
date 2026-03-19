@@ -8,7 +8,7 @@ export type AnimationType =
   | 'ethereal_float' 
   | 'glow_breathing'
   | 'ink_bleed'
-  | 'neon_flicker';
+  | 'super_morph';
 
 export type VisualStyle = 
   | 'minimal' 
@@ -38,8 +38,17 @@ export interface DesignDNA {
 export interface WidgetManifest {
   widgetId: string;
   name: string;
-  iconType: 'bot' | 'sparkles' | 'zap' | 'ghost' | 'message' | 'skull' | 'flame' | 'star' | 'heart' | 'scissors';
-  shape: 'circle' | 'square' | 'blob' | 'pill' | 'diamond';
+  iconType: 
+    | 'bot' | 'sparkles' | 'zap' | 'ghost' | 'message' | 'skull' | 'flame' | 'star' | 'heart' | 'scissors'
+    | 'shopping-bag' | 'utensils' | 'coffee' | 'stethoscope' | 'briefcase' | 'graduation-cap' | 'camera' 
+    | 'music' | 'plane' | 'home' | 'dumbbell' | 'truck' | 'code' | 'palette' | 'hammer' | 'shopping-cart'
+    | 'building' | 'landmark' | 'hotel' | 'car' | 'bike' | 'gift' | 'camera-retro' | 'clapperboard'
+    | 'gamepad-2' | 'mic' | 'headphones' | 'book' | 'newspaper' | 'pen-tool' | 'brush' | 'layers'
+    | 'database' | 'cpu' | 'server' | 'cloud' | 'shield' | 'lock' | 'key' | 'wallet' | 'credit-card'
+    | 'dollar-sign' | 'trending-up' | 'pie-chart' | 'bar-chart-3' | 'activity' | 'heart-pulse'
+    | 'thermometer' | 'pill' | 'syringe' | 'baby' | 'dog' | 'cat' | 'fish' | 'leaf'
+    | 'sprout' | 'flower-2' | 'sun' | 'moon' | 'cloud-rain' | 'wind' | 'droplets' | 'umbrella';
+  shape: 'blob_standard' | 'blob_tall' | 'blob_wide' | 'blob_asymmetric' | 'blob_fluid';
   theme: DesignDNA;
   animation: {
     type: AnimationType;
@@ -77,7 +86,7 @@ export const defaultManifest: WidgetManifest = {
   widgetId: 'widget_default',
   name: 'Default Assistant',
   iconType: 'bot',
-  shape: 'circle',
+  shape: 'blob_standard',
   theme: {
     primary: '#6366f1',
     secondary: '#4f46e5',
